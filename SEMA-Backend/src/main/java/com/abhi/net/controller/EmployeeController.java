@@ -3,6 +3,8 @@ package com.abhi.net.controller;
 import com.abhi.net.exception.ResourceNotFoundException;
 import com.abhi.net.model.Employee;
 import com.abhi.net.repository.EmployeeRepository;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +17,7 @@ import java.util.Map;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/api/v1")
+@Api(value="Simple Employee Management App", description="Operations pertaining to Employee")
 public class EmployeeController {
 
     @Autowired
